@@ -115,6 +115,29 @@ MAPBOX_API_KEY=your_ampbox_api_key
 12. Render the result.html template and pass the data for display.
 
 
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Air.jpg>
+</p>
+
+
+### View:
+
+This is the first page that opens if I click on Air Quality. I can click on any position of the map and will get the current Air Quality of that place.
+<p align="center">
+  <img alt="img" src=screenshots/Air_Model_1.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Air_Model_2.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Air_Model_3.jpg>
+</p>
+
+
 ## Water Pollution
 
 
