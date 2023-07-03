@@ -314,7 +314,7 @@ This is the result I got:
 I uploaded the below image on the website.
 
 <p align="center">
-  <img alt="img" src=screenshots/Image_1_check_soil.jpg>
+  <img alt="img" src=screenshots/Image_1_soil_check.jpg>
 </p>
 
 This is the result I got:
