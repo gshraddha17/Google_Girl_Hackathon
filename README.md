@@ -108,6 +108,46 @@ MAPBOX_API_KEY=your_ampbox_api_key
 
 ## Deforestation Patterns
 
+### Process:
+
+1. The code uses `'annual-change-forest-area.csv' dataset`.
+2. A preliminary `data exploration` is performed to gain initial insights into the dataset. 
+3. `Data visualization techniques by Matplotlib`, are employed to create visually compelling and informative plots. Histograms, line plots, box plots, and bar plots are generated to reveal the distribution and temporal patterns of net forest conversion values across different countries. These visualizations aid in understanding deforestation trends and their geographical variations.
+4. `Feature engineering techniques` are applied to extract additional valuable information from the dataset. Grouping the data by country allows for the calculation of essential metrics such as total deforestation, average deforestation rate, and the number of years covered by the dataset. These metrics are consolidated into a new dataframe, enabling further analysis and comparison.
+5. The code utilizes TensorFlow to develop an `LSTM model for time series forecasting`. The LSTM model is trained using the provided training dataset, with the architecture comprising a single LSTM layer followed by a dense layer. The model is optimized using the `Adam optimizer` and trained to `minimize the mean squared error (MSE)`. The input data is reshaped to match the required format of the LSTM model.
+6. The trained LSTM model is evaluated using the test dataset to assess its predictive performance. The mean squared error (MSE) is calculated to quantify the deviation between the predicted and actual values.
+7. To further analyze the time series data, the code incorporates the `ARIMA model from the statsmodels library`. The ARIMA model is fitted to the training data, enabling the generation of forecasts for the test data. The mean squared error (MSE) is computed to evaluate the accuracy of the forecasted values.
+8. The ARIMA model is serialized using the pickle library, allowing it to be saved in a file named `'arima_model.pkl'`. This enables convenient storage and retrieval of the model for future predictions without the need for retraining.
+9. The code progresses to develop a dynamic and user-friendly `Flask web application`. The web application provides an interactive interface for users to generate visualizations and forecasts based on their inputs. The ARIMA model, previously saved using pickle, is loaded within the application to enable efficient forecasting. Matplotlib is utilized to create informative plots illustrating the actual and forecasted deforestation rates for the selected country. The resulting plot is saved in the static folder and presented to the user, providing a comprehensive understanding of deforestation patterns and trends.
+
+
+### Flowchart:
+
+
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/deforestation_1.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/deforestation_2.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/deforestation_3.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/deforestation_4.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/deforestation_5.jpg>
+</p>
+
+
 
 ## Climate Patterns
 
