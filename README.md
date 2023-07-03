@@ -128,23 +128,23 @@ MAPBOX_API_KEY=your_ampbox_api_key
 ### View:
 
 <p align="center">
-  <img alt="img" src=screenshots/deforestation_1.jpg>
+  <img alt="img" src=screenshots/Deforestation_1.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/deforestation_2.jpg>
+  <img alt="img" src=screenshots/Deforestation_2.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/deforestation_3.jpg>
+  <img alt="img" src=screenshots/Deforestation_3.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/deforestation_4.jpg>
+  <img alt="img" src=screenshots/Deforestation_4.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/deforestation_5.jpg>
+  <img alt="img" src=screenshots/Deforestation_5.jpg>
 </p>
 
 
