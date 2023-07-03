@@ -5,7 +5,7 @@
 </p>
 
 
-Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dynamic website presents an interactive map showcasing crucial environmental data at your fingertips. Explore visualizations of air quality, water pollution, deforestation rates, and climate patterns. With ClimaMind, identify any flower and determine plant health with ease. By simply clicking a photo or viewing on the map, unveil valuable insights about soil types and the ideal plants for each. Immerse yourself in captivating animations of diverse landscapes. Stay informed about weather conditions in different locations. ClimaMind empowers you to make informed decisions and take action for a sustainable future.
+Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dynamic website presents an interactive map showcasing crucial environmental data at your fingertips. Explore visualizations of air quality, water pollution, deforestation rates, and climate patterns. With ClimaMind, identify any flower and determine plant health with ease. By simply clicking a photo or viewing on the map, unveil valuable insights about soil types and the ideal plants for each. Stay informed about weather conditions in different locations. ClimaMind empowers you to make informed decisions and take action for a sustainable future.
 
 ## Table of contents
 
@@ -21,7 +21,6 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Plant Health](#plant-health)
 - [Soil Type](#soil-type)
 - [Types of Flowers](#types-of-flowers)
-- [Types of Landscape](#types-of-landscape)
 
 ## Installation
 
@@ -398,7 +397,3 @@ This is the result I got:
 <p align="center">
   <img alt="img" src=screenshots/Flower_Model_3.jpg>
 </p>
-
-
-
-## Types of Landscape
