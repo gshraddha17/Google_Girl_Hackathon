@@ -197,7 +197,7 @@ By developing an AI system for Waste Classification and ways of disposal, my wor
 I uploaded the below image on the website.
 
 <p align="center">
-  <img alt="img" src=screenshots/Image_1_Waste_Check.jpg>
+  <img alt="img" src=screenshots/Image_1_check_waste.jpg>
 </p>
 
 This is the result I got:
@@ -209,7 +209,7 @@ This is the result I got:
 Then I uploaded the below image on the website.
 
 <p align="center">
-  <img alt="img" src=screenshots/Image_2_Waste_Check.jpg>
+  <img alt="img" src=screenshots/Image_2_waste_check.jpg>
 </p>
 
 This is the result I got:
