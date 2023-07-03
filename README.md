@@ -157,6 +157,60 @@ MAPBOX_API_KEY=your_ampbox_api_key
 
 ## Waste Management
 
+### Vision:
+
+By developing an AI system for Waste Classification and ways of disposal, my work contributes to understanding the current state of the environment. Through real-time insights and visualizations, it enables informed decision-making, connecting waste management with critical environmental factors. Together, we can create a sustainable future and protect our environment.
+
+### Process:
+
+1. The code builds a waste classification model using a `Convolutional Neural Network (CNN) architecture` using `Waste-Classification-Data` dataset.
+2. The dataset is loaded and preprocessed, converting the images to `RGB format` and storing the images and corresponding labels in separate lists.
+3. `Data exploration` is performed to understand the distribution of waste classes in the dataset using pie charts and sample image visualizations.
+4. The CNN model is constructed using the `Sequential API from Keras`. It consists of multiple `Conv2D and MaxPooling2D layers for feature extraction`, followed by Dense layers for classification.
+5. The model is compiled with the `binary cross-entropy loss function, Adam optimizer`, and accuracy as the evaluation metric.
+6. Image data generators are used to perform `data augmentation` and rescale the pixel values for the training and testing data.
+7. The model is trained using the fit_generator function with the train_generator, and the training progress is visualized with accuracy and loss plots.
+8. The model is evaluated on the test_generator, and the accuracy and loss metrics are plotted.
+9. The predict_func function is defined to make predictions on individual images, displaying the predicted class label.
+10. The trained model is saved as "Waste_Classification_Model.h5".
+11. `A Flask web application` is created to allow users to upload waste images for classification.
+12. The uploaded image is processed, and the model makes predictions on the image class.
+13. The predicted class is displayed to the user along with disposal methods specific to that waste type.
+14. The web application runs on a local server and can be accessed through a browser.
+
+### Flowchart:
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Waste_Model_1.jpg>
+</p>
+
+I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Image_1_Waste_Check.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Waste_Model_2.jpg>
+</p>
+
+Then I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Image_2_Waste_Check.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Waste_Model_3.jpg>
+</p>
+
+
 
 ## Rankings
 
