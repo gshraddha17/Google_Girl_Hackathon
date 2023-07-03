@@ -226,6 +226,60 @@ This is the result I got:
 
 ## Plant Health
 
+### Vision:
+
+I have created a webpage that leverages real-time image analysis to provide instant and accurate assessments of plant health. By harnessing the power of advanced AI algorithms, the application swiftly determines whether a plant is healthy or diseased, empowering users with timely information to make informed decisions. This innovative solution merges technology and environmental awareness, revolutionizing the way we monitor and care for plant life. Together, we are paving the way towards a greener and more sustainable future.
+
+### Process:
+
+1. The code builds a dataframe from image data by extracting images through Kaggle dataset `plant-leaves-for-image-classification` and corresponding labels from the specified directories.
+2. `Data augmentation techniques` are applied using the `ImageDataGenerator` to increase the training data and enhance model performance.
+3. The `MobileNetV2` model is used as the base model, with the convolutional layers frozen to prevent retraining.
+4. Additional layers are added on top of the base model for classification, including a global average pooling layer and dense layers.
+5. The model is compiled with the Adam optimizer and categorical cross-entropy loss function.
+6. The training data is fed to the model using the train_generator, and the model is trained for the `specified number of epochs`.
+7. The model is evaluated on the test data using the test_generator, and the test loss and accuracy are calculated.
+8. `A Flask web application` is created to allow users to upload images for waste classification.
+9. The uploaded image is processed, preprocessed, and fed into the trained model for prediction.
+10. The health of plant is displayed to the user. 
+11. The application runs on a local server and can be accessed through a web browser.
+
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Plant.jpg>
+</p>
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Plant_Model_1.jpg>
+</p>
+
+I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Image_1_check_health.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Plant_Model_2.jpg>
+</p>
+
+Then I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Image_2_check_health.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Plant_Model_3.jpg>
+</p>
+
 
 ## Soil Type
 
