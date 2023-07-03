@@ -1,7 +1,7 @@
 # ClimaMind : Unlocking Environmental Intelligence
 
 <p align="center">
-  <img alt="logo" src=ClimaMind_Logo.jpeg">
+  <img alt="logo" src=ClimaMind_Logo.jpeg>
 </p>
 
 
