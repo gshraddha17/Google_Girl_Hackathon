@@ -93,3 +93,43 @@ MAPBOX_API_KEY=your_ampbox_api_key
 <p align="center">
   <img alt="img" src=screenshots/terminal_flask.jpg>
 </p>
+
+
+## Map
+
+
+
+## Air Quality
+
+
+
+## Water Pollution
+
+
+## Deforestation Patterns
+
+
+## Climate Patterns
+
+
+## Weather Type
+
+
+## Waste Management
+
+
+## Rankings
+
+
+
+## Plant Health
+
+
+## Soil Type
+
+
+
+## Types of Flowers
+
+
+## Types of Landscape
