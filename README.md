@@ -67,6 +67,11 @@ MAPBOX_API_KEY=your_ampbox_api_key
 7. Sign Up on `Kaggle` to download the datasets. 
 
 
-##Usage
+## Usage
 
+1. View `index.html` of the `main_website` folder on browser.
+
+<p align="center">
+  <img alt="img" src=screenshots/main_page1.jpeg">
+</p>
 
