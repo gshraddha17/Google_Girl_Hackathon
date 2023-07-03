@@ -123,6 +123,9 @@ MAPBOX_API_KEY=your_ampbox_api_key
 
 ### Flowchart:
 
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Deforestation.jpg>
+</p>
 
 
 ### View:
@@ -179,6 +182,11 @@ By developing an AI system for Waste Classification and ways of disposal, my wor
 14. The web application runs on a local server and can be accessed through a browser.
 
 ### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_waste.jpg>
+</p>
+
 
 ### View:
 
