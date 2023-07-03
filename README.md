@@ -15,7 +15,6 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Air Quality](#air-quality)
 - [Water Pollution](#water-pollution)
 - [Deforestation Patterns](#deforestation-patterns)
-- [Weather Type](#weather-type)
 - [Climate Patterns](#climate-patterns)
 - [Waste Management](#waste-management)
 - [Plant Health](#plant-health)
@@ -217,9 +216,6 @@ This is the first page that opens if I click on Air Quality. I can click on any 
 </p>
 
 
-## Weather Type
-
-
 
 ## Climate Patterns
 
@@ -227,15 +223,15 @@ Gives a Graphical Study of Weather over a period of 24 hours
 
 ### Process:
 
-1. Create a Flask application instance and set the template folder path. This will use both OpenWeatherMap API and the Weather Model we trained earlier.
-2. Define a function generate_and_save_plot to generate and save the weather plot using Matplotlib and Seaborn.
-3. Define the route '/' to render the index template.Define the route '/weather' to handle the weather form submission.
-4. Retrieve the city and country from the form and get the current date.
-5. Create a DataFrame from the weather information and manipulate it.
-6. Start a separate thread to generate and save the weather plot.
-7. Render the weather template and pass the graph path as a parameter.
-8. Run the Flask application if the script is executed directly.
-9. The matplotlib.use('Agg') statement sets the backend of Matplotlib to Agg for plotting without a display.
+1. Create a Flask application instance and set the template folder path. This will use both OpenWeatherMap API and the Weather Model I trained to give weather summary.
+3. Define a function generate_and_save_plot to generate and save the weather plot using Matplotlib and Seaborn.
+4. Define the route '/' to render the index template.Define the route '/weather' to handle the weather form submission.
+5. Retrieve the city and country from the form and get the current date.
+6. Create a DataFrame from the weather information and manipulate it.
+7. Start a separate thread to generate and save the weather plot.
+8. Render the weather template and pass the graph path as a parameter.
+9. Run the Flask application if the script is executed directly.
+10. The matplotlib.use('Agg') statement sets the backend of Matplotlib to Agg for plotting without a display.
 
 ### Flowchart:
 
