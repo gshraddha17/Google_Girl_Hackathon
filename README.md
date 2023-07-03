@@ -184,7 +184,7 @@ By developing an AI system for Waste Classification and ways of disposal, my wor
 ### Flowchart:
 
 <p align="center">
-  <img alt="img" src=screenshots/Flowchart_waste.jpg>
+  <img alt="img" src=screenshots/Flowchart_Waste.jpg>
 </p>
 
 
