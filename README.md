@@ -99,6 +99,20 @@ MAPBOX_API_KEY=your_ampbox_api_key
 
 ## Air Quality
 
+### Process:
+
+1. Data preparation and preprocessing: Read the dataset from city_hour.csv into a pandas DataFrame (df).
+2. Split the dataset into features (X) and target (y) variables. Split the data into training and testing sets using train_test_split.
+3. Perform feature scaling using StandardScaler to standardize the feature variables.
+4. Build a Multi-Layer Perceptron (MLP) model using Sequential from tensorflow.keras. Define the model architecture with input and hidden layers.
+5. Train the model using the training dataset.
+6. Evaluate the trained model on the testing set to calculate the loss.
+7. Save the trained model as model.h5 for future use.
+8. Initialize the Flask application and load the saved model.
+9. Implement a route in the Flask app to handle incoming POST requests for prediction.
+10. Preprocess the input data, make predictions using the trained model, and return the results
+11. Extract the required data from the query parameters.
+12. Render the result.html template and pass the data for display.
 
 
 ## Water Pollution
