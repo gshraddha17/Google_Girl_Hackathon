@@ -14,7 +14,7 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Map](#map)
 - [Air Quality](#air-quality)
 - [Water Pollution](#water-pollution)
-- [Deforestation](#deforestation-rates)
+- [Deforestation Patterns](#deforestation-rates)
 - [Climate Patterns](#climate-patterns)
 - [Weather Type](#weather-type)
 - [Waste Management](#waste-management)
