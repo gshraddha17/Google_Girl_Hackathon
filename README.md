@@ -18,7 +18,6 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Climate Patterns](#climate-patterns)
 - [Weather Type](#weather-type)
 - [Waste Management](#waste-management)
-- [Rankings](#rankings)
 - [Plant Health](#plant-health)
 - [Soil Type](#soil-type)
 - [Types of Flowers](#types-of-flowers)
@@ -218,12 +217,6 @@ This is the result I got:
   <img alt="img" src=screenshots/Waste_Model_3.jpg>
 </p>
 
-
-
-## Rankings
-
-
-
 ## Plant Health
 
 ### Vision:
@@ -282,6 +275,71 @@ This is the result I got:
 
 
 ## Soil Type
+
+### Vision:
+
+* I have developed a soil classification model using a Convolutional Neural Network (CNN) architecture. To enhance the user experience, I integrated the MapBox API with my JavaScript code. This integration allows users to interact with a map displayed using the Leaflet library. By clicking anywhere on the map, an API call is triggered, capturing a satellite image of the selected location. This satellite imaging feature provides users with an alternative method to assess the soil without the need to upload an image. It offers real-time insights and visualizations of the current state of the environment either through map or uploading any image of your choice.
+
+* To complement the soil classification results, the web application provides users with a list of suitable plants for the predicted soil type. This information empowers users to make informed decisions about plant selection based on the specific soil classification. With these features, my web application provides a user-friendly interface for soil classification and environmental analysis. It integrates advanced machine learning techniques with satellite imaging to offer a comprehensive understanding of soil patterns and environmental conditions.
+
+### Process:
+
+1. The soil classification model was developed using a `Convolutional Neural Network (CNN)` architecture.
+2. The `Soil-Classification-Data dataset by Kaggle` was used for training the model.
+3. The dataset was preprocessed by converting the images to RGB format and separating the images and corresponding labels.
+4. `Data exploration techniques`, such as pie charts and sample image visualizations, were employed to analyze the distribution of soil classes in the dataset.
+5. The CNN model was constructed using the `Sequential API from Keras`.
+6. `Image data generators` were used for data augmentation and rescaling of pixel values during the training and testing phase.
+7. The model was trained using the fit_generator function with the training data generator.
+8. Training progress was monitored and visualized using accuracy and loss plots.
+9. The trained soil classification model was saved as "Soil_Classification_Model.h5".
+10. A Flask web application was created to provide a user-friendly interface for soil classification.
+11. The web application offers two options to the users:
+* Users can upload a soil image directly for classification. The uploaded image is processed, and the model predicts the soil class. The predicted class label is displayed to the user.
+* Users can also view the soil through satellite imaging. The application integrates with satellite imagery services to display an aerial view of the soil. This provides users with an alternative method to assess the soil without needing to upload an image.
+
+
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Soil.jpg>
+</p>
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Soil_Model_1.jpg>
+</p>
+
+I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Image_1_check_soil.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Soil_Model_2.jpg>
+</p>
+
+I used the second feature and clicked on the option `View on Map` and clicked at any place on the map.
+
+<p align="center">
+  <img alt="img" src=screenshots/Soil_Model_3.jpg>
+</p>
+
+This is the satellite image I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Soil_Model_4.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Soil_Model_5.jpg>
+</p>
 
 
 
