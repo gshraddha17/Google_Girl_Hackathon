@@ -19,6 +19,10 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Weather Type](#weather-type)
 - [Waste Management](#waste-management)
 - [Rankings](#rankings)
+- [Plant Health](#plant-health)
+- [Soil Type](#soil-type)
+- [Types of Flowers](#types-of-flowers)
+- [Types of Landscape](#types-of-landscape)
 
 ## Installation
 
