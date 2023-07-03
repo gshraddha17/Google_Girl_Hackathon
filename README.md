@@ -347,11 +347,21 @@ This is the result I got:
 
 ### Vision:
 
-
+My flower detection model complements the problem statement by leveraging real-time image analysis. By focusing on flower images, we contribute to a comprehensive understanding of the environment's biodiversity. This vision enables proactive environmental monitoring and management, fostering a sustainable and informed approach to environmental conservation.
 
 ### Process:
 
-
+1. Used the Kaggle dataset `flowers-datset`; loaded the images and resized tehm to a common size.
+2. Rescaled the pixel values.
+3. Defined the `model architecture using convolutional layers, pooling layers, batch normalization, and activation functions`.
+4. Added global average pooling and a fully connected layer for classification.
+5. Save the best model based on validation accuracy using a model checkpoint callback.
+6. Train the model using the training dataset for a `specified number of epochs`.
+7. Defined a function to visualize the predicted probabilities for test images.
+8. Selected random test images and display their predicted probabilities for each flower class.
+9. Set up a `Flask web application` for deploying the flower classification model.
+10. Load the trained model.
+11. Handle image uploads, preprocess the uploaded image, make predictions using the model, and display the predicted class.
 
 ### Flowchart:
 
@@ -380,7 +390,7 @@ This is the result I got:
 Then I uploaded the below image on the website.
 
 <p align="center">
-  <img alt="img" src=screenshots/Check_Flower_2.jpg>
+  <img alt="img" src=screenshots/Check_Flower_2.jpeg>
 </p>
 
 This is the result I got:
