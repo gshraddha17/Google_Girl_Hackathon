@@ -345,5 +345,50 @@ This is the result I got:
 
 ## Types of Flowers
 
+### Vision:
+
+
+
+### Process:
+
+
+
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Flower.jpg>
+</p>
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flower_Model_1.jpg>
+</p>
+
+I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Check_Flower_1.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flower_Model_2.jpg>
+</p>
+
+Then I uploaded the below image on the website.
+
+<p align="center">
+  <img alt="img" src=screenshots/Check_Flower_2.jpg>
+</p>
+
+This is the result I got:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flower_Model_3.jpg>
+</p>
+
+
 
 ## Types of Landscape
