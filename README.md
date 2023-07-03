@@ -72,20 +72,20 @@ MAPBOX_API_KEY=your_ampbox_api_key
 1. View `index.html` of the `root directory` on browser.
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page1.jpg">
+  <img alt="img" src=screenshots/main_page1.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page2.jpg">
+  <img alt="img" src=screenshots/main_page2.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page3.jpg">
+  <img alt="img" src=screenshots/main_page3.jpg>
 </p>
 
 
 2. For all folders which have `Flask` usage run the `.py` file. A development server will set up which will show you the link where you can view the `index.html` of that directory.
 
 <p align="center">
-  <img alt="img" src=screenshots/terminal_flask.jpg">
+  <img alt="img" src=screenshots/terminal_flask.jpg>
 </p>
