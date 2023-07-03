@@ -95,6 +95,37 @@ MAPBOX_API_KEY=your_ampbox_api_key
 
 ## Map
 
+This map feature serves as a fundamental component of the website, focusing on API integration rather than AI or ML functionality. It enhances the overall user experience and contributes to the website's comprehensive appearance. While other features may involve more advanced AI and ML techniques, this map feature plays a crucial role in providing users with a visually appealing and well-rounded website experience and `I have used the map code at other places in many of my AI models` to give my website an amazing look.
+
+### Process:
+
+1. The HTML markup defines a map container with an id of "map" where the Leaflet map will be rendered. It also includes the necessary CSS and JavaScript libraries, including Leaflet and jQuery.
+2. In the JavaScript code, a getWeatherData function is defined to fetch weather data from the OpenWeatherMap API. It takes latitude, longitude, and an API key as parameters.
+3. The addMarker function is defined to add a marker to the map at the specified latitude and longitude coordinates. It first checks if there is already a marker on the map and removes it if present.
+4. Inside the addMarker function, the getWeatherData function is called to fetch the weather data for the given coordinates. The fetched data is then used to extract various weather parameters such as temperature, feels like temperature, pressure, humidity, visibility, wind speed, wind direction, and wind gust.
+5. A new marker is created using Leaflet's L.marker function and added to the map at the specified coordinates. The bindPopup method is used to attach a popup to the marker, displaying the weather parameters retrieved from the API.
+6. When the user clicks on the map, a click event is triggered, and the callback function is executed. This function retrieves the latitude and longitude of the clicked position and calls the addMarker function with these coordinates and the map object.
+7. Finally, a window resize event listener is added to provide a smooth transition when resizing the window. It adjusts the height of the map container and calls invalidateSize on the map to update its size accordingly.
+
+
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Map.jpg>
+</p>
+
+
+### View:
+
+I can click on any place of the map and get detailed information about that place.
+
+<p align="center">
+  <img alt="img" src=screenshots/Map_1.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Map_2.jpg>
+</p>
 
 
 ## Air Quality
