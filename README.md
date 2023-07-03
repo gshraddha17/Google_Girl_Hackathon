@@ -15,8 +15,8 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Air Quality](#air-quality)
 - [Water Pollution](#water-pollution)
 - [Deforestation Patterns](#deforestation-patterns)
-- [Climate Patterns](#climate-patterns)
 - [Weather Type](#weather-type)
+- [Climate Patterns](#climate-patterns)
 - [Waste Management](#waste-management)
 - [Plant Health](#plant-health)
 - [Soil Type](#soil-type)
@@ -217,11 +217,43 @@ This is the first page that opens if I click on Air Quality. I can click on any 
 </p>
 
 
+## Weather Type
+
+
 
 ## Climate Patterns
 
+Gives a Graphical Study of Weather over a period of 24 hours
 
-## Weather Type
+### Process:
+
+1. Create a Flask application instance and set the template folder path. This will use both OpenWeatherMap API and the Weather Model we trained earlier.
+2. Define a function generate_and_save_plot to generate and save the weather plot using Matplotlib and Seaborn.
+3. Define the route '/' to render the index template.Define the route '/weather' to handle the weather form submission.
+4. Retrieve the city and country from the form and get the current date.
+5. Create a DataFrame from the weather information and manipulate it.
+6. Start a separate thread to generate and save the weather plot.
+7. Render the weather template and pass the graph path as a parameter.
+8. Run the Flask application if the script is executed directly.
+9. The matplotlib.use('Agg') statement sets the backend of Matplotlib to Agg for plotting without a display.
+
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Climate_Patterns.jpg>
+</p>
+
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Weather_Analysis_1.jpg>
+</p>
+<p align="center">
+  <img alt="img" src=screenshots/Weather_Analysis_2.jpg>
+</p>
+
+
 
 
 ## Waste Management
