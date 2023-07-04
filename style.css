@@ -1,0 +1,184 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://wallpapercave.com/wp/wp4538244.jpg');
+  background-size: cover;
+  background-position: center;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+.logo h1 {
+  color: #fff;
+  font-size: 24px;
+}
+.dashboard-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.dashboard-icon img {
+  height: 30px;
+  margin-right: 10px;
+}
+.user-info p {
+  color: #fff;
+  font-size: 16px;
+}
+.user-info button {
+  background-color: #ff4a4a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.user-info button:hover {
+  background-color: #f03636;
+}
+main {
+  padding: 10px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.box img {
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.box h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.box p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.box a {
+  padding: 8px 16px;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+.box a:hover {
+  background-color: #111;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.social-media-icons {
+  margin-bottom: 20px;
+}
+.social-media-icons a {
+  margin-right: 10px;
+}
+.social-media-icons img {
+  height: 20px;
+  transition: filter 0.3s ease-in-out;
+}
+.social-media-icons a:hover img {
+  filter: brightness(80%);
+}
+/* Dashboard Styles */
+#dashboard {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.box {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  float: left;
+  clear: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .box:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+#dashboard ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 120px;
+}
+#dashboard li {
+  margin-bottom: 10px;
+}
+#dashboard a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+#dashboard a:hover {
+  color: #f03636;
+}
+#dashboard.hide {
+  transform: translateX(-200px);
+}
+
+footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-color: #f5f5f5; */
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
