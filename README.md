@@ -73,15 +73,15 @@ MAPBOX_API_KEY=your_ampbox_api_key
 1. View `index.html` of the `root directory` on browser.
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page_1.jpg>
+  <img alt="img" src=screenshots/Main_page_1.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page_2.jpg>
+  <img alt="img" src=screenshots/Main_page_2.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page_3.jpg>
+  <img alt="img" src=screenshots/Main_page_3.jpg>
 </p>
 
 
