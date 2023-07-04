@@ -109,9 +109,7 @@ This map feature serves as a fundamental component of the website, focusing on A
 
 ### Flowchart:
 
-<p align="center">
-  <img alt="img" src=screenshots/Flowchart_Map.jpg>
-</p>
+
 
 
 ### View:
@@ -295,6 +293,11 @@ Gives a Graphical Study of Weather over a period of 24 hours
 9. Run the Flask application if the script is executed directly.
 10. The matplotlib.use('Agg') statement sets the backend of Matplotlib to Agg for plotting without a display.
 
+### Flowchart:
+
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Map.jpg>
+</p>
 
 ### View:
 
