@@ -295,12 +295,6 @@ Gives a Graphical Study of Weather over a period of 24 hours
 9. Run the Flask application if the script is executed directly.
 10. The matplotlib.use('Agg') statement sets the backend of Matplotlib to Agg for plotting without a display.
 
-### Flowchart:
-
-<p align="center">
-  <img alt="img" src=screenshots/Flowchart_Climate_Patterns.jpg>
-</p>
-
 
 ### View:
 
