@@ -107,8 +107,6 @@ This map feature serves as a fundamental component of the website, focusing on A
 7. Finally, a window resize event listener is added to provide a smooth transition when resizing the window. It adjusts the height of the map container and calls invalidateSize on the map to update its size accordingly.
 
 
-### Flowchart:
-
 
 
 
