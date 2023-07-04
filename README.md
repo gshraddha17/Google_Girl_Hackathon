@@ -173,10 +173,25 @@ This is the first page that opens if I click on Air Quality. I can click on any 
 This gives us the real time insights and visualization of our water. Graphs are displayed which clearly shows what should be the safe range for any parameter and what it actually is. This can help us take measures to improve the quality of water.
 
 ### Process:
-
+1. Loaded the dataset using pd.read_csv() and performed descriptive statistics on the dataset.
+2. Created an Exploratory Data Analysis (EDA) report using ProfileReport from pandas_profiling.
+3. Implemented a custom LogisticRegression class for binary classification.
+4. Split the dataset into training and validation sets using train_test_split.
+5. Trained the logistic regression model on the training data using fit.
+6. Created and tested additional logistic regression models with different hyperparameters.
+7. Created, trained, and saved a logistic regression model using LogisticRegression and joblib.dump.
+8. Imported necessary libraries and set up a Flask web application.
+9. Loaded the pre-trained model and defined safe value ranges for each feature.
+10. Defined routes for the home page and the analysis request.
+11. Created a form for users to input water analysis parameters on the index page.
+12. Processed user input, generated histograms with safe ranges, and saved them as images.
+13.Rendered the results page with the user's input value and the generated plots.
 
 
 ### Flowchart:
+<p align="center">
+  <img alt="img" src=screenshots/Flowchart_Water.jpg>
+</p>
 
 
 ### View:
