@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flower Classification - Result</title>
+    <style>
+      body {
+        text-align: center;
+        font-weight: bold;
+      }
+      h1 {
+        color: black;
+      }
+      p {
+        color: black;
+      }
+      .flower-image {
+        display: block;
+        margin: 20px auto;
+        max-width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flower Classification - Result</h1>
+    <p>The flower is: <strong>{{ predicted_class }}</strong></p>
+    {% if predicted_class == 'daisy' %}
+    <div class="flower-container">
+      <img class="flower-image" src="https://th.bing.com/th/id/R.0533f5e33767be115c6b668c92fe8829?rik=FqR6JycEEGk%2bkg&riu=http%3a%2f%2fweknowyourdreams.com%2fimages%2fdaisy%2fdaisy-06.jpg&ehk=tOOxxVcF76aFTjg4MjLz8gicTri9foV%2bJquzxKnr7pU%3d&risl=&pid=ImgRaw&r=0" alt="Daisy">
+      <p>
+        The <strong>Daisy</strong> is a beautiful flower that typically grows in meadows and gardens. It thrives in well-drained soil and requires moderate sunlight. Daisies are known for their hardiness and can tolerate various environmental conditions.
+      </p>
+    </div>
+    {% elif predicted_class == 'dandelion' %}
+    <div class="flower-container">
+      <img class="flower-image" src="https://th.bing.com/th/id/OIP.s32XMO8FP89c8UjgdLsMWQHaE8?pid=ImgDet&rs=1" alt="Dandelion">
+      <p>
+        The <strong>Dandelion</strong> is a yellow flower with fluffy seed heads. It is commonly found in fields and disturbed areas. Dandelions can grow in various soil types and are known for their resilience. They require plenty of sunlight to thrive.
+      </p>
+    </div>
+    {% elif predicted_class == 'rose' %}
+    <div class="flower-container">
+      <img class="flower-image" src="https://th.bing.com/th/id/R.0c53c1b4ec7f3778a1deced74e32f72a?rik=kIVvgMPdYJOaEg&riu=http%3a%2f%2fwww.millcreekgardens.com%2fwp-content%2fuploads%2f2018%2f05%2ftransplanting-rose-bushes.jpg&ehk=Nzb%2fP24N7Q0rL6jVaxvHkTxWuziPZ6lMkZIz9%2bEDDkg%3d&risl=&pid=ImgRaw&r=0" alt="Rose">
+      <p>
+        The <strong>Rose</strong> is a classic and elegant flower that comes in a variety of colors. It prefers well-drained soil and moderate sunlight. Roses are often associated with love and romance and require regular care and maintenance to flourish.
+      </p>
+    </div>
+    {% elif predicted_class == 'sunflower' %}
+    <div class="flower-container">
+      <img class="flower-image" src="https://th.bing.com/th/id/R.9ffb1fdea3e7c022527439a40b8e1b33?rik=g9vj5VzFr0Kyig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-4gIz1uC2YJY%2fT6px4_DoZJI%2fAAAAAAAAAik%2fHbXx__JLvvQ%2fs1600%2fsunflowers.jpg&ehk=gkl3hfN3A%2fVm%2fHzIy8D2kZ4h2BN984kgPHiJFBfki7c%3d&risl=&pid=ImgRaw&r=0" alt="Sunflower">
+      <p>
+        The <strong>Sunflower</strong> is a vibrant flower known for its large yellow petals and dark center. It grows best in well-drained soil and requires plenty of sunlight. Sunflowers are native to North America and are commonly associated with happiness and positivity.
+      </p>
+    </div>
+    {% elif predicted_class == 'tulip' %}
+    <div class="flower-container">
+      <img class="flower-image" src="https://th.bing.com/th/id/R.c59bb43fdb411789bf07690e476c4428?rik=F5GNJGj7t%2fxqLw&riu=http%3a%2f%2fthedailygardener.org%2fwp-content%2fuploads%2f2019%2f08%2fTulips.jpeg&ehk=KBeFLGVjSKYKNmC8Pmq9BeHjE3a85RvUgeEeMywiz0A%3d&risl=&pid=ImgRaw&r=0" alt="Tulip">
+      <p>
+        The <strong>Tulip</strong> is a colorful flower that blooms in spring. It prefers well-drained soil and moderate temperatures. Tulips are commonly found in gardens and are popular as cut flowers. They come in various colors and symbolize elegance and beauty.
+      </p>
+    </div>
+    {% endif %}
+  </body>
+</html>

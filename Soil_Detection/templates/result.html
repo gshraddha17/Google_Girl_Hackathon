@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Type</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/f5/2d/40/f52d402cfb24ebf77810ca6065cd7d26.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: black;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: black;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 500px;
+            max-height: 500px;
+            margin-bottom: 20px;
+        }
+        ul {
+            color: black;
+            font-size: 18px;
+            text-align: left;
+            margin-top: 20px;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Soil Type: {{ predicted_class }}</h2>
+    <ul>
+        {% if predicted_class == 'Alluvial soil' %}
+            <li>Wheat - Staple cereal crop. Grows well in fertile alluvial soil with good drainage.</li>
+            <li>Rice - Important food crop. Requires flooded alluvial soil with high moisture content.</li>
+            <li>Sugarcane - Commercial crop. Thrives in fertile alluvial soil with ample moisture.</li>
+            <li>Corn - Versatile cereal crop. Grow well in alluvial soil with good organic matter.</li>
+            <li>Watermelon - Refreshing fruit. Prefer alluvial soil with good moisture retention.</li>
+            <li>Spinach - Leafy green vegetable. Requires fertile alluvial soil and regular watering.</li>
+            <li>Peas - Legume crop. Grows well in alluvial soil with good organic matter.</li>
+            <li>Lettuce - Leafy vegetable. Prefer alluvial soil with good moisture retention.</li>
+        {% elif predicted_class == 'Clayey soil' %}
+            <li>Potatoes - Versatile root vegetable. Grow well in clayey soil with good moisture.</li>
+            <li>Beans - Nutritious legumes. Prefer clayey soil with good drainage.</li>
+            <li>Turnips - Root vegetables. Thrive in clayey soil with good moisture retention.</li>
+            <li>Cabbage - Leafy vegetable. Requires fertile clayey soil and regular watering.</li>
+            <li>Roses - Classic flowers. Thrive in clayey soil with good moisture retention.</li>
+            <li>Apples - Popular fruit trees. Requires fertile clayey soil and regular watering.</li>
+            <li>Oranges - Citrus trees. Grow well in clayey soil with good drainage.</li>
+            <li>Grapes - Vines used for winemaking. Thrive in clayey soil with proper drainage.</li>
+        {% elif predicted_class == 'Laterite soil' %}
+            <li>Tea - Widely consumed beverage. Thrives in laterite soil with good drainage.</li>
+            <li>Rubber - Important commercial crop. Requires well-drained laterite soil.</li>
+            <li>Coconut - Versatile palm tree. Grows well in laterite soil near coastal areas.</li>
+            <li>Bananas - Nutritious fruit. Prefer well-drained laterite soil with good moisture.</li>
+            <li>Pineapple - Tropical fruit. Thrives in laterite soil with good drainage and moisture.</li>
+            <li>Cashew - Cash crop. Requires laterite soil with good drainage and moderate fertility.</li>
+            <li>Black Pepper - Spice crop. Grows well in well-drained laterite soil with proper sunlight.</li>
+            <li>Turmeric - Medicinal herb. Prefers laterite soil with good drainage and moisture.</li>
+        {% elif predicted_class == 'Loamy soil' %}
+            <li>Tomatoes - Popular vegetable. Grow well in loamy soil with good organic matter.</li>
+            <li>Carrots - Root vegetable. Prefer loamy soil with good drainage and moisture.</li>
+            <li>Onions - Flavorful bulbs. Thrive in loamy soil with good organic matter.</li>
+            <li>Peppers - Culinary vegetables. Require loamy soil with good moisture retention.</li>
+            <li>Blueberries - Nutritious berries. Prefer slightly acidic loamy soil with good drainage.</li>
+            <li>Lavender - Fragrant herb. Thrives in well-drained loamy soil with proper sunlight.</li>
+            <li>Mint - Aromatic herb. Requires loamy soil with good moisture retention.</li>
+            <li>Basil - Culinary herb. Grows well in loamy soil with good organic matter.</li>
+        {% elif predicted_class == 'Sandy loam' %}
+            <li>Avocados - Nutrient-rich fruit. Grow well in sandy loam soil with good drainage.</li>
+            <li>Peaches - Sweet and juicy fruits. Require sandy loam soil with moderate fertility.</li>
+            <li>Strawberries - Delicious berries. Thrive in well-drained sandy loam soil.</li>
+            <li>Asparagus - Nutritious vegetable. Prefer sandy loam soil with good moisture retention.</li>
+            <li>Pears - Fruit trees. Grow well in sandy loam soil with moderate fertility.</li>
+            <li>Rosemary - Aromatic herb. Requires sandy loam soil with good drainage.</li>
+            <li>Oregano - Culinary herb. Grows well in sandy loam soil with good moisture retention.</li>
+            <li>Lemon Grass - Fragrant herb. Prefer sandy loam soil with good drainage.</li>
+        {% elif predicted_class == 'Sandy soil' %}
+            <li>Cacti - Desert plants. Thrive in sandy soil with low moisture.</li>
+            <li>Sunflowers - Bright and cheerful flowers. Grow well in sandy soil with full sunlight.</li>
+            <li>Dune Grass - Stabilizing plants. Adapt well to sandy soil with low moisture.</li>
+            <li>Sweet Potatoes - Nutritious root vegetables. Prefer sandy soil with good drainage.</li>
+            <li>Carrots - Root vegetable. Grow well in sandy soil with good moisture retention.</li>
+            <li>Marigolds - Colorful flowers. Prefer sandy soil with good drainage and sunlight.</li>
+            <li>Zinnias - Vibrant flowers. Thrive in sandy soil with good drainage.</li>
+            <li>Succulents - Drought-tolerant plants. Adapt well to sandy soil with low moisture.</li>
+        {% endif %}
+    </ul>
+</body>
+</html>

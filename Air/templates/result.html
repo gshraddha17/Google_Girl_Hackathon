@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Air Quality Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://i.pinimg.com/originals/f5/2d/40/f52d402cfb24ebf77810ca6065cd7d26.jpg');
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .parameter {
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+        }
+
+        #gasesChart {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Air Quality Result</h1>
+        <ul>
+            <li>
+                <span class="parameter">AQI:</span>
+                <span id="aqi"></span>
+            </li>
+            <li>
+                <span class="parameter">CO:</span>
+                <span id="co"></span>
+            </li>
+            <li>
+                <span class="parameter">NO:</span>
+                <span id="no"></span>
+            </li>
+            <li>
+                <span class="parameter">NO2:</span>
+                <span id="no2"></span>
+            </li>
+            <li>
+                <span class="parameter">O3:</span>
+                <span id="o3"></span>
+            </li>
+            <li>
+                <span class="parameter">SO2:</span>
+                <span id="so2"></span>
+            </li>
+            <li>
+                <span class="parameter">PM2.5:</span>
+                <span id="pm25"></span>
+            </li>
+            <li>
+                <span class="parameter">PM10:</span>
+                <span id="pm10"></span>
+            </li>
+            <li>
+                <span class="parameter">NH3:</span>
+                <span id="nh3"></span>
+            </li>
+        </ul>
+
+        <canvas id="gasesChart"></canvas>
+
+        <p id="aqiStatement"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Extract the parameter values from the URL query parameters
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get the parameter values from the URL query parameters
+        var aqi = getParameterByName('aqi');
+        var co = getParameterByName('co');
+        var no = getParameterByName('no');
+        var no2 = getParameterByName('no2');
+        var o3 = getParameterByName('o3');
+        var so2 = getParameterByName('so2');
+        var pm25 = getParameterByName('pm25');
+        var pm10 = getParameterByName('pm10');
+        var nh3 = getParameterByName('nh3');
+
+        // Display the parameter values on the page
+        document.getElementById('aqi').textContent = parseFloat(aqi).toFixed(2);
+        document.getElementById('co').textContent = parseFloat(co).toFixed(2);
+        document.getElementById('no').textContent = parseFloat(no).toFixed(2);
+        document.getElementById('no2').textContent = parseFloat(no2).toFixed(2);
+        document.getElementById('o3').textContent = parseFloat(o3).toFixed(2);
+        document.getElementById('so2').textContent = parseFloat(so2).toFixed(2);
+        document.getElementById('pm25').textContent = parseFloat(pm25).toFixed(2);
+        document.getElementById('pm10').textContent = parseFloat(pm10).toFixed(2);
+        document.getElementById('nh3').textContent = parseFloat(nh3).toFixed(2);
+
+        // Define gas names and values
+        var gasNames = ['CO', 'NO', 'NO2', 'O3', 'SO2', 'PM2.5', 'PM10', 'NH3'];
+        var gasValues = [co, no, no2, o3, so2, pm25, pm10, nh3];
+
+        // Generate random colors for the gas bars
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        var gasColors = gasValues.map(function () {
+            return getRandomColor();
+        });
+
+        // Create the gas chart
+        var ctx = document.getElementById('gasesChart').getContext('2d');
+        var gasesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: gasNames,
+                datasets: [{
+                    label: 'Gas Levels',
+                    data: gasValues,
+                    backgroundColor: gasColors,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // AQI Statement
+        var aqiStatement = '';
+        if (aqi >= 0 && aqi <= 50) {
+            aqiStatement = 'Air quality is considered satisfactory, and air pollution poses little or no risk.';
+        } else if (aqi >= 51 && aqi <= 100) {
+            aqiStatement = 'Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution. Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.';
+        } else if (aqi >= 101 && aqi <= 250) {
+            aqiStatement = 'Members of sensitive groups may experience health effects. The general public is not likely to be affected. Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.';
+        } else if (aqi >= 251 && aqi <= 300) {
+            aqiStatement = 'Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects. Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion.';
+        } else if (aqi > 300) {
+            aqiStatement = 'Health warnings of emergency conditions. The entire population is more likely to be affected. Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.';
+        }
+
+        document.getElementById('aqiStatement').textContent = aqiStatement;
+    </script>
+</body>
+</html>

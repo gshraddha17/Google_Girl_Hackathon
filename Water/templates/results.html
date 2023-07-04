@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Analysis Results</title>
+</head>
+<body>
+    <h1>Water Analysis Results</h1>
+    {% for user_plot, safe_plot in plots %}
+        <h2>User Value:</h2>
+        <img src="{{ user_plot }}" alt="User Plot"><br><br>
+    {% endfor %}
+</body>
+</html>

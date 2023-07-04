@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Waste Classification</title>
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/o9cTXkK.jpg');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: black;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: black;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .disposal-list {
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .disposal-list ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        .disposal-list ul li {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Waste Classification</h1>
+    <h2>Predicted Class: {{ predicted_class }}</h2>
+
+    {% if predicted_class == 'Organic' %}
+        <div class="disposal-list">
+            <h3>Disposal Methods:</h3>
+            <ul>
+                <li>Composting: Convert organic waste into nutrient-rich compost for gardening.</li>
+                <li>Vermin-composting: Utilize vermicomposting techniques with worms to break down organic waste.</li>
+                <li>Worm-composting: Use worms to decompose organic waste and produce nutrient-rich worm castings.</li>
+                <li>Green waste collection: Dispose of organic waste through municipal green waste collection programs.</li>
+                <li>Burying: Bury organic waste in the ground for natural decomposition.</li>
+            </ul>
+        </div>
+    {% elif predicted_class == 'Recyclable' %}
+        <div class="disposal-list">
+            <h3>Disposal Methods:</h3>
+            <ul>
+                <li>Separate recyclables from general waste: Keep recyclable materials separate from regular trash.</li>
+                <li>Place recyclables in recycling bins: Use designated recycling bins for paper, plastic, glass, and metal.</li>
+                <li>Recycle at local recycling center: Take recyclable items to a nearby recycling facility for proper recycling.</li>
+                <li>Donate or repurpose: Consider donating or repurposing items that are still in good condition.</li>
+                <li>Upcycling: Transform recyclable materials into new and useful products.</li>
+                <li>E-waste recycling: Dispose of electronic waste at authorized e-waste recycling centers.</li>
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html>

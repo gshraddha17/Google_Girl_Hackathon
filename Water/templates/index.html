@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Analysis</title>
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/originals/f5/2d/40/f52d402cfb24ebf77810ca6065cd7d26.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"] {
+            width: 200px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/analyze" method="post">
+        <label for="ph">pH:</label>
+        <input type="number" step="any" id="ph" name="ph"><br><br>
+        <label for="hardness">Hardness:</label>
+        <input type="number" step="any" id="hardness" name="Hardness"><br><br>
+
+        <label for="solids">Solids:</label>
+        <input type="number" step="any" id="solids" name="Solids"><br><br>
+        <label for="chloramines">Chloramines:</label>
+        <input type="number" step="any" id="chloramines" name="Chloramines"><br><br>
+        <label for="sulfate">Sulfate:</label>
+        <input type="number" step="any" id="sulfate" name="Sulfate"><br><br>
+        <label for="conductivity">Conductivity:</label>
+        <input type="number" step="any" id="conductivity" name="Conductivity"><br><br>
+        <label for="organic_carbon">Organic Carbon:</label>
+        <input type="number" step="any" id="organic_carbon" name="Organic_carbon"><br><br>
+        <label for="trihalomethanes">Trihalomethanes:</label>
+        <input type="number" step="any" id="trihalomethanes" name="Trihalomethanes"><br><br>
+        <label for="turbidity">Turbidity:</label>
+        <input type="number" step="any" id="turbidity" name="Turbidity"><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>

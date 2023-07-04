@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+            transition: height 0.5s, width 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script>
+        var currentMarker = null;
+        function getWeatherData(latitude, longitude, apiKey) {
+            var url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=" + apiKey;
+            return $.get(url);
+        }
+
+        function addMarker(latitude, longitude, map) {
+            if (currentMarker) {
+                map.removeLayer(currentMarker);
+            }
+
+            getWeatherData(latitude, longitude, "YOUR OPENWEATHERMAP_API_KEY")
+                .done(function(data) {
+                    var temperature = (data.main.temp - 273.15).toFixed(2);
+                    var feelsLike = (data.main.feels_like - 273.15).toFixed(2);
+                    var tempMin = (data.main.temp_min - 273.15).toFixed(2);
+                    var tempMax = (data.main.temp_max - 273.15).toFixed(2);
+                    var pressure = data.main.pressure;
+                    var humidity = data.main.humidity;
+                    var visibility = data.visibility;
+                    var windSpeed = data.wind.speed;
+                    var windDirection = data.wind.deg;
+                    var windGust = data.wind.gust;
+
+                    var marker = L.marker([latitude, longitude]).addTo(map);
+                    marker.bindPopup("Temperature: " + temperature + "°C<br>Feels Like: " + feelsLike + "°C<br>Min Temperature: " + tempMin + "°C<br>Max Temperature: " + tempMax + "°C<br>Pressure: " + pressure + " hPa<br>Humidity: " + humidity + "%<br>Visibility: " + visibility + " meters<br>Wind Speed: " + windSpeed + " m/s<br>Wind Direction: " + windDirection + "°<br>Wind Gust: " + windGust + " m/s");
+                    currentMarker = marker;
+                })
+                .fail(function() {
+                    console.log("Failed to fetch weather data.");
+                });
+        }
+
+        $(document).ready(function() {
+            var map = L.map('map', { animate: true }).setView([0, 0], 2);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            map.on('click', function(e) {
+                var latitude = e.latlng.lat.toFixed(6);
+                var longitude = e.latlng.lng.toFixed(6);
+
+                addMarker(latitude, longitude, map);
+            });
+
+            // Smooth transition on window resize
+            $(window).resize(function() {
+                $("#map").height($(window).height());
+                map.invalidateSize();
+            }).resize();
+        });
+    </script>
+</body>
+</html>
