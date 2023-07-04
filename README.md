@@ -13,7 +13,7 @@ Discover the power of ClimaMind: Your Key to Environmental Intelligence. This dy
 - [Usage](#usage)
 - [Map](#map)
 - [Air Quality](#air-quality)
-- [Water Pollution](#water-pollution)
+- [Water Analysis](#water-analysis)
 - [Deforestation Patterns](#deforestation-patterns)
 - [Climate Patterns](#climate-patterns)
 - [Waste Management](#waste-management)
@@ -73,15 +73,15 @@ MAPBOX_API_KEY=your_ampbox_api_key
 1. View `index.html` of the `root directory` on browser.
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page1.jpg>
+  <img alt="img" src=screenshots/main_page_1.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page2.jpg>
+  <img alt="img" src=screenshots/main_page_2.jpg>
 </p>
 
 <p align="center">
-  <img alt="img" src=screenshots/main_page3.jpg>
+  <img alt="img" src=screenshots/main_page_3.jpg>
 </p>
 
 
@@ -168,7 +168,54 @@ This is the first page that opens if I click on Air Quality. I can click on any 
 </p>
 
 
-## Water Pollution
+## Water Analysis
+
+This gives us the real time insights and visualization of our water. Graphs are displayed which clearly shows what should be the safe range for any parameter and what it actually is. This can help us take measures to improve the quality of water.
+
+### Process:
+
+
+
+### Flowchart:
+
+
+### View:
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_1.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_2.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_3.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_4.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_5.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_6.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_7.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_8.jpg>
+</p>
+
+<p align="center">
+  <img alt="img" src=screenshots/Water_Analysis_9.jpg>
+</p>
 
 
 ## Deforestation Patterns
